@@ -18,9 +18,9 @@ const membersTeam = [
         picture: "walter-gordon-office-manager.jpg"
     },
     {
-        name: "Angelo Lopez",
+        name: "Angela Lopez",
         position: "Social Media Manager",
-        picture: "angelo-lopez-social-media-manager.jpg"
+        picture: "angela-lopez-social-media-manager.jpg"
     },
     {
         name: "Scott Estrada",
@@ -33,6 +33,22 @@ const membersTeam = [
         picture: "barbara-ramos-graphic-designer.jpg"
     }
 ];
-// STAMPO NELLA CONSOLE L'ARRAY
+// STAMPARE NELLA CONSOLE INFORMAZIONE DEI MEMBRI
 console.log(membersTeam);
 
+//STAMPARE LE STESSE INFORMAZIONI SU DOM SOTTOFORMA DI STRINGHE
+const teamRow = document.querySelector(".row");
+for (let i = 0; i <= membersTeam.length; i++) {
+    const currentMember = membersTeam[i];
+    teamRow.innerHTML += `
+        <div class = "col">
+            <div class = "card">
+                <img src = "img/${currentMember.picture}" />
+                <div class = "info">
+                    <h2>${currentMember.name}</h2>
+                    <span>${currentMember.position}</span>
+                </div>
+            </div>
+        </div>
+    `;
+}
