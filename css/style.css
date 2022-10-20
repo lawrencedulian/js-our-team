@@ -1,0 +1,28 @@
+img {
+    width: 100%;
+}
+
+header {
+    background-color: #bcaaa4;
+}
+
+main {
+    background-color: #efdcd5;
+}
+
+.col {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    margin-bottom: 2rem;
+    background-color: white;
+}
+
+.card .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
